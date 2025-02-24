@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <!--
+    Whatsapp Post Analysis Service (WAPS)
+    created: March 21, 2023
+    updated: Feb 22, 2025
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Whatsapp Post Analysis</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30BDW1SP82"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30BDW1SP82');
+  </script>
+
+  <!-- Styles and Scripts -->
+  <link href="./styles/whatsapp_processor.css"
+        rel="stylesheet"
+        type="text/css">
+    </link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="./styles/theme.css" type="text/css"> 
+  <link rel="icon" type="image/x-icon" href="whatsapp-posts-analysis.png"/>
+  
+</head>
+<body class="filter-medium">
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+    <div class="container">
+      <img src="whatsapp-posts-analysis.png" width="60px"/>
+      <a class="navbar-brand" href="/">Whatsapp Posts Analysis</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+        </ul>
+        <a class="btn navbar-btn btn-primary ml-2 text-white">
+          <i class="fa d-inline fa-lg fa-user-circle-o"></i> Sign in</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container main_body">
+    <div class="row div_large_font">
+      <p> Billions of people use Whatsapp. And there are billions of community groups.
+        A group sustains and provides value when there is active engagement from the members.
+        We need to understand the participation statistics.
+      </p>
+      <p>
+        <span class="bolder">WhatsApp Posts Analyzer (WAPS)</span>is created to help with such quick and easy analysis.
+      </p>
+      <p>
+        The <a href="./waps_v1.html">v1 Whatsapp Post Analyzer</a> analyzes the chat conversations with privacy.
+        
+        You can load the whatsapp chat conversations and quickly receive information on
+         posters, posting frequency, and the sessions.
+      </p>
+      <hr/>
+    </div>
+    <div class="row">
+      <h4 class="waps_h4">More info</h4>
+    </div>
+    <div class="row">
+      <ul>
+        <li> This code was written with help from #generativeAI code</li>
+        <li> See details of <a href="./plog.txt">Prompts used</a></li>
+      </ul>
+    </div>
+    <div class="row">
+      <h4 class="waps_h4">v2 is coming up</h4>
+    </div>
+    <div>
+      <ul>
+        <li> Load and process conversations using locall hosted LLMs.</li>
+        <li> Provide quick reports on topics, summaries, trends, and visual reports.</li>
+        <li> Allow for interactive chat with the loaded conversations.</li>
+      </ul>
+    </div>
+    <div class="row">      
+      <p> Happily created by <a href="https://zanavu.com/notes/a-world-of-possibilities/">Murali</a></p>
+    </div>    
+  </div>    
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+  <script src="js/waps.js"></script>
+  
+  <script>
+
+    (function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })();
+  </script>
+</body>
+</html>

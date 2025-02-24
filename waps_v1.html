@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <!--
+    Whatsapp Post Analysis Service (WAPS)
+    created: March 21, 2023
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Whatsapp Post Analysis v1</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30BDW1SP82"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30BDW1SP82');
+  </script>
+
+  <!-- Styles and Scripts -->
+  <link href="./styles/whatsapp_processor.css"
+        rel="stylesheet"
+        type="text/css">
+    </link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="./styles/theme.css" type="text/css"> 
+  <link rel="icon" type="image/x-icon" href="whatsapp-posts-analysis.png"/>
+  
+</head>
+<body class="filter-medium">
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+    <div class="container">
+      <img src="whatsapp-posts-analysis.png" width="60px"/>
+      <a class="navbar-brand" href="/">Whatsapp Posts Analysis</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+        </ul>
+        <a class="btn navbar-btn btn-primary ml-2 text-white">
+          <i class="fa d-inline fa-lg fa-user-circle-o"></i> Sign in</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container main_body">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="row">
+          <h4 class="waps_h4">Submit Chat file</h4>
+          <div class="col-sm-12 file-upload-container" 
+            ondragover="wapsHandleDragOver(event)" 
+            ondragleave="wapsHandleDragLeave(event)" 
+            ondrop="wapsDrop(event)">
+            <header></header>
+            <label for="file-input">Select File</label>
+            <input id="file-input" type="file" onchange="wapsProcessInputFile(event)" />
+            <div class="file-name"></div>
+            </div>  
+        </div>
+        <div class="row">
+          <h4 class="waps_h4">Settings</h4>
+          <div class="col-sm-12">
+            <header></header>
+            <label for="session-duration">Session Duration (minutes)</label>
+            <input id="session-duration" 
+              type="text"
+              value="600"
+              onchange="wapsSetSessionDuration(event)" />
+            <div class="file-name"></div>
+            </div>  
+        </div>
+
+      </div>
+      <div class="col-sm-3">
+        <p id="wat_summary"></p>
+      </div>
+      <div class="col-sm-5">
+        <p id="wat_frequency"></p>
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <h4 class="waps_h4">Processing Steps</h4>
+    </div>
+    <div class="row">
+      <p>
+      <ul>
+        <li> Use WhatsApp on mobile phone </li>
+        <li> Select the chat group you want to analyze</li>
+        <li> Visit group information, scroll down to the end</li>
+        <li> Select "Export Chat"; Do not include media</li>
+        <li> Save generated chat file (usually a zip file)</li>
+        <li> Extract the main text file from ZIP file</li>
+        <li> Load the file here for analysis</li>
+        <li> Adjust the session duration as desired</li>         
+      </ul>
+      </p>
+    </div>
+    <div class="row">
+      <h4 class="waps_h4">Note on security</h4>
+      </div>
+      <div class="row">      
+      <ul>
+        <li> All processing is done on your machine</li>
+        <li> No chat information is sent over the internet</li>
+      </ul>
+    </div>    
+    <div class="row">
+      <h4 class="waps_h4">More info</h4>
+      </div>
+      <div class="row">      
+      <ul>
+        <li> This code was written with help from #generativeAI code</li>
+        <li> See details of <a href="./plog.txt">Prompts used</a></li>
+      </ul>
+    </div>
+    <div class="row">      
+      <p> Happily created by <a href="https://zanavu.com/notes/a-world-of-possibilities/">Murali</a></p>
+    </div>    
+  </div>    
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="js/waps.js"></script>
+  
+  <script>
+
+    (function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })();
+  </script>
+</body>
+</html>

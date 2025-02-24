@@ -1,0 +1,98 @@
+WhatsApp Analysis of Posts (WAPs) was implemented 
+ with partial help from GPT assisted coding.
+
+Here are some prompts used for this analysis code.
+Code was all done in JavaScript, so I can easily host it on the website.
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+*Prompt 1: Get Started*
+
+Give me code in javascript to parse the lines provided below 
+ to construct the frequency of lines from posters. 
+
+The fields in the line are as follows:
+[Date, Time] Poster: Message
+
+Here is an example with 3 lines of text:
+[8/10/22, 12:47:36 PM] Mark: First Message is here ....
+[8/10/22, 12:57:33 PM] Ram: Second single line message
+[8/20/22, 1:45:16 PM] Mark: Third Message is here ....
+
+Desired output is: 
+ 2 Mark
+ 1 Ram
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+*Prompt 2: handle multi-line inputs*
+
+I just found out that my input sometimes had multiple lines of message. 
+How should I modify the code for handling this. 
+
+Here is the example input.
+
+[8/10/19, 12:47:36 PM] Mark: First Message is here ....
+[8/10/19, 12:51:57 PM] Katie: Second message - line 1
+Line 2
+https://www.entrepreneur.com/article/321668
+[8/10/19, 12:47:36 PM] Mark: Third message
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+*Prompt 3: fix the multiple line issues*
+
+Concatenate multiple lines into a single line if there is no prefix date, time is found.
+
+The input is usually in the format:
+
+[date, time] poster: message
+
+Take a look at the example below where there is no date, time on line 2 or 3. For this example, I want a single line output produced.
+
+[8/10/19, 12:51:57 PM] Katie: Second message - line 1
+Line 2
+https://www.entrepreneur.com/article/321668
+
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+*Prompt 4: Handle errors*
+
+I have a problem. When I try to run it, I get a Type error.
+
+          const tempPoster = tempMatch[2];
+                                      ^
+
+TypeError: Cannot read properties of null (reading '2')
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+*Prompt 5: Read file*
+Ok. There was one bug I fixed it. don't worry.
+
+What is the code for reading in a file with these messages sitting in the file.
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+*Prompt 6: web page, please*
+
+nice work, buddy.
+
+Now, please help me create a web page that allows me to upload an input file. Take that input file and process it to find the poster frequency.
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+*Prompt 7: generate code (since node server was stuck)*
+
+the javascript code is not complete ... please give it again
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+*Prompt 8: Better CSS*
+for the above HTML, give me CSS to make sure that the buttons look better.
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+*Prompt 9: file drag and drop*
+
+give me CSS for the "file input" with drag and drop text information
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+*Prompt 10: parse date time and find time
+parse "4/21/23, 9:18:55 PM" into a date time format in javascript. how do I find time part in universal seconds using the above date?
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+I had some working code for creating and publishing web pages on firebase. That was used to integrate the analysis code.
+
